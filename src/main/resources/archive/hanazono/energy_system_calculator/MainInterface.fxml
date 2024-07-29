@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MainAnchorPane" prefHeight="320.0" prefWidth="600.0" stylesheets="@Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="archive.hanazono.energy_system_calculator.MainController">
+   <children>
+      <Pane fx:id="BackgroundPane" prefHeight="320.0" prefWidth="600.0" styleClass="MainBackground" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="14.0" layoutY="71.0" prefHeight="50.0" prefWidth="227.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/excess.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="EnergyLeftTF" styleClass="TextField" text="0">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="6.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Pane fx:id="CloseButton" layoutX="556.0" layoutY="14.0" onMouseClicked="#HandlesClicked" prefHeight="30.0" prefWidth="30.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" onMouseClicked="#HandlesClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/close.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <HBox fx:id="ExecuteButton" layoutX="55.0" layoutY="275.0" onMouseClicked="#HandlesClicked" prefHeight="37.0" prefWidth="142.0" styleClass="ExecuteButton">
+               <children>
+                  <Text onMouseClicked="#HandlesClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Execute">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" onMouseClicked="#HandlesClicked" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@Image/send.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="147.0" prefHeight="50.0" prefWidth="227.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/target.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="MaxEnergyTF" styleClass="TextField" text="240">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="6.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="223.0" prefHeight="50.0" prefWidth="227.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/bolt.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="EnergyMinsTF" styleClass="TextField" text="6">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="6.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="51.0" prefHeight="17.0" prefWidth="167.0" styleClass="Label" text="Energy Left Ammount" textFill="#d95f59">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="127.0" prefHeight="17.0" prefWidth="167.0" styleClass="Label" text="Max Energy Ammount" textFill="#d95f59">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="203.0" prefHeight="17.0" prefWidth="167.0" styleClass="Label" text="Energy/Min Ammount" textFill="#d95f59">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Pane layoutX="241.0" layoutY="55.0" prefHeight="262.0" prefWidth="356.0" styleClass="ResultBackground">
+               <children>
+                  <Text layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LabelTime" wrappingWidth="151.0">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Text>
+                  <Label alignment="CENTER" layoutX="20.0" layoutY="71.0" prefHeight="17.0" prefWidth="112.0" styleClass="Label2" text="Current Date" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CurrentDateLB" alignment="CENTER" layoutX="20.0" layoutY="88.0" prefHeight="30.0" prefWidth="151.0" styleClass="LabelTime" text="00/00/00" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="20.0" layoutY="125.0" prefHeight="17.0" prefWidth="112.0" styleClass="Label2" text="Will take..." textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="WillTakeLB" alignment="CENTER" layoutX="20.0" layoutY="142.0" prefHeight="30.0" prefWidth="151.0" styleClass="LabelTime" text="00:00:00" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="20.0" layoutY="16.0" prefHeight="17.0" prefWidth="112.0" styleClass="Label2" text="Current Time" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CurrentTimeLB" alignment="CENTER" layoutX="20.0" layoutY="33.0" prefHeight="30.0" prefWidth="151.0" styleClass="LabelTime" text="00:00:00 AM" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="185.0" layoutY="71.0" prefHeight="17.0" prefWidth="112.0" styleClass="Label2" text="Max Energy" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="MaxEnergyLB" alignment="CENTER" layoutX="185.0" layoutY="88.0" prefHeight="30.0" prefWidth="151.0" styleClass="LabelTime" text="0" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="185.0" layoutY="125.0" prefHeight="17.0" prefWidth="112.0" styleClass="Label2" text="Energy/Min" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="EnergyMinLB" alignment="CENTER" layoutX="185.0" layoutY="142.0" prefHeight="30.0" prefWidth="151.0" styleClass="LabelTime" text="0" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="185.0" layoutY="16.0" prefHeight="17.0" prefWidth="112.0" styleClass="Label2" text="You Have..." textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="YouHaveLB" alignment="CENTER" layoutX="185.0" layoutY="33.0" prefHeight="30.0" prefWidth="151.0" styleClass="LabelTime" text="0" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="96.0" layoutY="179.0" prefHeight="27.0" prefWidth="145.0" styleClass="Label2" text="Full In.." textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="FullInLB" alignment="CENTER" layoutX="66.0" layoutY="206.0" prefHeight="50.0" prefWidth="210.0" styleClass="LabelTime" text="00:00:00 AM" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="StatusLB" alignment="CENTER" layoutX="-1.0" layoutY="247.0" prefHeight="17.0" prefWidth="112.0" styleClass="Label2" text="Status: Unknown" textFill="#d95f59">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="256.0" styleClass="Label" text="Energy System Calculator" textFill="#d95f59">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="CurrentTimeLB1" alignment="CENTER" layoutX="279.0" layoutY="14.0" prefHeight="30.0" prefWidth="151.0" text="by Hanazono Folder" textFill="#d95f59">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

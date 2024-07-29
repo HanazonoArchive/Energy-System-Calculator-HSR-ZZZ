@@ -1,0 +1,37 @@
+.MainBackground {
+    -fx-background-color: linear-gradient(to bottom right, #522258, #8C3061);
+}
+
+.TextField {
+    -fx-background-color: linear-gradient(to bottom right, #C63C51, #D95F59);
+    -fx-text-fill: #522258;
+    -fx-background-radius: 5 5 5 20;
+}
+
+.ExecuteButton {
+    -fx-background-color: linear-gradient(to bottom right, #D95F59, #8C3061);
+    -fx-text-fill: #8C3061;
+    -fx-background-radius: 10 10 10 10;
+    -fx-cursor: hand;
+}
+
+.Label {
+    -fx-background-color: linear-gradient(to bottom right, #D95F59, #C63C51);
+    -fx-text-fill: #522258;
+    -fx-background-radius: 5 5 5 5;
+}
+
+.ResultBackground {
+    -fx-background-color: linear-gradient(to bottom right, #C63C51, #D95F59);
+    -fx-background-radius: 30 10 10 10;
+}
+
+.Label2 {
+    -fx-background-color: linear-gradient(to bottom right, #522258, #8C3061);
+    -fx-text-fill: #D95F59;
+    -fx-background-radius: 5 5 5 5;
+}
+
+.LabelTime {
+    -fx-text-fill: #522258;
+}
