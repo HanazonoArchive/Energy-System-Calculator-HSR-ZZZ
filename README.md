@@ -13,4 +13,4 @@ Its main purpose is to calculate the time it will take for your energy system to
 ![javaw_Nb1amaIO4I](https://github.com/user-attachments/assets/3a5cc016-120d-4d56-9ac2-677e61b267b2)
 
 ## Improvements
-* soon...
+* i'll improve the font from if you notice it was AM/PM but it turn to am/pm, i'll try to fix it.
