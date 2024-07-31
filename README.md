@@ -10,7 +10,7 @@ Its main purpose is to calculate the time it will take for your energy system to
 * 🎮 Any other game
 
 ***This is the improve version of my old project from my other github account***
-> https://github.com/HanazonoArchive/Energy-System-Calculator-HSR-ZZZ
+> https://github.com/HanazonoFolder/Trailblaze-Power-Calculator
 
 ![image](https://github.com/user-attachments/assets/36ae5eee-bb8c-496d-98c7-88c48f435bab)
 ![javaw_Nb1amaIO4I](https://github.com/user-attachments/assets/3a5cc016-120d-4d56-9ac2-677e61b267b2)
